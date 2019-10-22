@@ -26,9 +26,9 @@ const addPostValidator = (req, res, next) => {
       throw new ErrorHandler(400, 'missing the post information');
     } else {
       const {
-        title, meal_type, description, ingredients, directions,
+        title, meal_type, description, ingredient, directions,
       } = req.body;
-      if (!title || !meal_type || !description || !ingredients || !directions) {
+      if (!title || !meal_type || !description || !ingredient || !directions) {
         throw new ErrorHandler(
           400,
           'missing the post required field, please fill all the required fields',
